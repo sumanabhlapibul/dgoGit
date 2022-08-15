@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>DeepDive</title>
+
+<link rel="icon" type="image/x-icon" href="smarty.png" >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fahkwang">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<link rel= "stylesheet" type = "text/css" href = "mystyle.css">
+
+</head>
+
+<body>
+
+<script>
+
+var today = new Date();
+var date = today.getDate()+'-'+ (today.getMonth()+1) +'-'+ today.getFullYear();
+var time = today.getHours() + ":" + today.getMinutes() ;//+ ":" + today.getSeconds();
+
+document.write( " Today is " + date + " and the time is " + time + "<br>");
+
+// ensure date comes as 01, 09 etc
+	var DD = ("0" + today.getDate()).slice(-2);
+	// getMonth returns month from 0
+	var MM = ("0" + (today.getMonth() + 1)).slice(-2);
+	var dd = DD+'-'+ MM+'-'+ today.getFullYear();
+	document.write( " Today is " + dd + "<br>");
+	
+	const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+	var ddd = DD+'-'+ monthNames[today.getMonth()]+'-'+ today.getFullYear();
+	document.write( " Today is " + ddd + "<br>");
+
+// BMI
+	const cm_to_m = 0.01;
+	function getBMI(client) {	
+		let HeightInMeter = cm_to_m * client.Height;
+		let BMI = client.Weight /HeightInMeter/HeightInMeter
+		return BMI.toFixed(2)
+	}
+	
+	let client = {
+		Name : "Sumana",
+		Weight : 52,
+		Height : 152 
+	}
+	
+document.write(client.Name + " from JavaScript in head section : BMI = " +  getBMI(client) + "<br>")	
+	
+	let client2 = {
+		Name : "Garfield",
+		Weight : 152,
+		Height : 52 }
+		
+document.write(client2.Name + " from JavaScript in head section : BMI = " +  getBMI(client2)+ "<br>")
+
+
+let clients = [  
+		{Name : "Sumana",
+		Weight : 52,
+		Height : 152 }, 
+		{Name : "Garfield",
+		Weight : 152,
+		Height : 52},
+		{Name : "Waldo",
+		Weight : 700,
+		Height : 150}]
+	
+	for (let i = 0; i < clients.length; i++) {
+		let client = clients [i];
+		let bmi = getBMI (client)
+		if (bmi>25) {
+			document.write("Loop through clients list BMI > 25 is  "+ client.Name + ":  " + bmi + "</br>" )
+			}
+		else {
+		document.write("Loop through clients list BMI < 25 is  "+ client.Name + ":  " + bmi + "</br>" )}
+	}	
+	
+</script>
+<div class="navbar">   	
+ <img class="logo" src="smarty.png"> 
+            <a href="#">Home</a></li>
+             <a href="homy.html">Another Page</a></li>
+             <a href="#">About</a></li>
+             <a href="#">Services</a></li>
+             <a href="#">Get in Touch</a></li>
+	</div>
+
+<!-- Side navigation -->
+<div class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+
+
+<!-- Add today date using JavaScript -->
+<p id = "dte"></p>
+
+<script>
+//using date from above script declared as var
+document.getElementById("dte").innerHTML = "Today is : "+ ddd;
+</script>
+
+
+<h3 style="color:blue;" >h3 inline color  : style="color:blue;" </h3>
+
+
+<button >Click Me</button>
+
+<!-- Display calculate data from input -->
+<p>Please enter info </p>
+
+<div>Name : <input type='text' name="txt" onchange = "myName(this.value)"/> </div><br>
+<div>DoB : <input type='date'name="dob" onchange = "myBirthDay(this.value)"/></div><br>
+<div>Weight in kg : <input type='number' name="wgt" onchange = "myWeight(this.value)"/> </div><br>
+<div>Height in cm : <input type='number'name="hgt" onchange = "myHeight(this.value)"/></div><br>
+
+<button onclick="show()">Write Below</button>
+<p id= "write"></p>
+<br>
+
+<button onclick="calc()">Calculate BMI</button>
+<p id= "calc"></p>
+
+
+<!-- Some rule for HTML -->
+<h3>HTML Tag Rules</h3>
+<ol>
+<li>Tags must be lowercase.</li>
+<li>Attributes must be enclosed in quotes in opening tag.</li>
+<li>Tags must be closed.</li>
+</ol>
+
+<footer>
+&copy;2022 The Do Good Only Company. All rights reserved.
+</footer>
+
+</body>
+
+<script>
+var name = "name";
+var dob = "birthday";
+var weight = 1;
+var height = 1;
+
+function myName(val) {
+  //alert("The input value has changed. The new value is: " + val);
+	name = val
+}
+
+function myBirthDay(val) {
+  //alert("The input value has changed. The new value is: " + val);
+	dob = val
+}
+function myWeight(val) {
+  //alert("The input value has changed. The new value is: " + val);
+	weight = val
+}
+
+function myHeight(val) {
+  //alert("The input value has changed. The new value is: " + val);
+	height = val
+}
+
+function show() {
+	 
+  document.getElementById("write").innerHTML = "Name :  " + name + " | Birthday : " + dob ;
+  
+}
+function age(p1) {
+  let today = new Date();
+  YoB = Number(p1.substring(0,4))  
+  return (today.getFullYear() -YoB); 
+}
+
+function calc() {
+
+  	let HeightInMeter = 0.01 * height;
+	let bmi = weight/HeightInMeter/HeightInMeter;
+	
+   document.getElementById("calc").innerHTML = "Name :  " + name + " | Birthday : " + dob +
+   " your BMI is " + bmi.toFixed(2) + "<br> you are " + age(dob) + " years old";
+
+}
+</script>
+
+</html>

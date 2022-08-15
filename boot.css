@@ -1,0 +1,53 @@
+body {
+    font-family :salish;
+    background-color: lightblue;
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+
+.jumbotron {
+    padding:30px 30px 70px 30px;
+    margin:0px auto;
+    background: #D1C4E9 ;
+    color:floralwhite;
+    height : 180px;
+}
+
+.footer{
+    background-color: #D1C4E9;
+    margin:15px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+
+
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+ 
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:200px;
+}
+
+.row-space {
+    margin-top: 20px;
+}
+
+.modal-header {
+    background-color: #512DA8;
+    color: floralwhite; }
+    .modal-header button {
+      color: floralwhite; }
+  
+.modal-body {
+    background-color: #D1C4E9; } 
+

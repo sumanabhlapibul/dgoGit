@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+<title>My Favorite Recipes</title>
+
+<style>
+h1 {
+    text-align: center; background: darkgreen; color:white; margin: 0px;
+}
+nav {
+    background: lightgreen; width: 20em;
+}
+nav ul {
+    padding-left: 25px;
+}
+article {
+    margin-left: 3rem;
+}
+img {
+    width: 400px; border: 5px solid black; padding: 10px;
+}
+body {
+    margin: 0px;
+}
+table {
+    margin-left: 2em; border-collapse: collapse;
+}
+tr {
+    border-bottom: 1px solid grey;
+}
+td.ingredient {
+    text-align: left; padding-right: 2em;
+}
+td.amount {
+    text-align: right; padding-left: 2em;
+}
+
+
+</style>
+</head>
+    <body>
+        <h1>My Favorite Recipes</h1>
+        <nav>
+        <ul>
+            <li><a href="#recipe1">Soup</a></li>
+            <li><a href="#recipe2">Salad</a></li>
+            <li><a href="#recipe3">Pizza</a></li>
+        </ul>
+        </nav>
+        <article id="recipe1">
+        <h2>Soup</h2>
+        <img src="E:\OneDrive\Websites\edX Assignments\HTML and CSS Fundamentals (W3C)\My Favorite Recipes\assets\img\soup.jpg"  alt="Picture of soup in a bowl.">
+        <p>
+            Beethoven once said <q>Only the pure of heart can make good soup.</q> Well, here's my attempt at doing just that!
+			<p>In French you'd say <span lang="fr">On voit souvent des chats sur le Web.</span></p>
+        </p>
+        <h3>List of Ingredients:</h3>
+        <table>
+            <tr>
+                <td class="ingredient">Ingredient 1</td>
+                <td class="amount">200 grams</td>
+            </tr>
+            <tr>
+                <td class="ingredient">Ingredient two</td>
+                <td class="amount">2000 grams</td>
+            </tr>
+            <tr>
+                <td class="ingredient">Ingred. 3</td>
+                <td class="amount">20 grams</td>
+            </tr>
+        </table>
+        <h3>Steps</h3>
+        <ol>
+            <li>Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+            <li>Enjoy!</li>
+        </ol>
+        </article>
+        <article id="recipe2">
+        <h2>Salad</h2>
+        <img src="E:\OneDrive\Websites\edX Assignments\HTML and CSS Fundamentals (W3C)\My Favorite Recipes\assets\img\salad.jpg"  alt="Picture of salad on a plate.">
+        <p>
+            Who can resist a fresh salad! Here's one of my favorites
+        </p>
+        <h3>List of Ingredients:</h3>
+        <ul>
+            <li>Ingredient 1</li>
+            <li>Ingredient 2</li>
+            <li>Ingredient 3</li>
+        </ul>
+        <h3>Steps</h3>
+        <ol>
+            <li>Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+            <li>Enjoy!</li>
+        </ol>
+        </article>
+        <article id="recipe3">
+        <h2>Pizza</h2>
+        <img src="E:\OneDrive\Websites\edX Assignments\HTML and CSS Fundamentals (W3C)\My Favorite Recipes\assets\img\pizza.png"  alt="Picture of pizza pie.">
+        <p>
+            Pizza, the king of comfort foods. Try this simple, taste sensation.
+        </p>
+        <h3>List of Ingredients:</h3>
+        <ul>
+            <li>Ingredient 1</li>
+            <li>Ingredient 2</li>
+            <li>Ingredient 3</li>
+        </ul>
+        <h3>Steps</h3>
+        <ol>
+            <li>Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+            <li>Enjoy!</li>
+        </ol>
+        </article>
+    </body>
+</html>
+
+<!-- module 2
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <title>My Favorite Recipes - Module 2</title>
+   </head>
+   <body>
+     <h1>My Favorite Recipes</h1>
+     <nav>
+       <ul>
+        <li><a href="#soup">Soup</a></li>
+        <li><a href="#salad">Salad</a></li>
+        <li><a href="#pizza">Pizza</a></li>
+       </ul>
+     </nav>
+     <article id="soup">
+       <h2>Soup</h2>
+       <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Bol_soupe_bicolore.jpg" alt="soup image" width=320>
+       <p>
+         Beethoven once said <q>Only the pure of heart can make a good soup</q>.   Well, here's my attempt at doing just that!
+       </p>
+       <ol>
+          <li>Step 1</li>   
+          <li>Step 2</li>   
+          <li>Step 3</li>   
+          <li>Enjoy!</li>   
+       </ol>
+     </article>
+     <article id="salad">
+        <h2>Salad</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Caesar_salad_%281%29.jpg/320px-Caesar_salad_%281%29.jpg" alt="salad image" width=320>
+        <h3>List of ingredients</h3>
+          <ul>
+              <li>Ingredient 1</li>
+              <li>Ingredient 2</li>
+              <li>Ingredient 3</li>
+          </ul>
+        <p>
+            Who can resist a fresh salad ! Here's one of my favorites. 
+        </p>
+        <ol>
+           <li>Step 1</li>   
+           <li>Step 2</li>   
+           <li>Step 3</li>   
+           <li>Enjoy!</li>   
+        </ol>
+      </article>
+     <article id="pizza">
+        <h2>Pizza</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Margherita_Originale.JPG/320px-Margherita_Originale.JPG" alt="pizza image" width=320>
+       <p>
+         Pizza, the king of comfort foods. Try this simple, taste sensation.
+       </p>
+       <ol>
+          <li>Step 1</li>   
+          <li>Step 2</li>   
+          <li>Step 3</li>   
+          <li>Enjoy!</li>   
+       </ol>
+     </article>
+   </body>
+</html>
+
+
+-->

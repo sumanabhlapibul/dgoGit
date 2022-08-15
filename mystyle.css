@@ -1,0 +1,67 @@
+body {
+	font-family: "Fahkwang", sans-serif;
+	margin-left: 150px;
+	padding-left : 20px;
+}  
+	
+h1, h3 {
+	font-family: "Audiowide", sans-serif;
+	
+	}
+
+footer {
+	padding-top:30px;
+   position:relative;
+   bottom:0;
+   width:100%;
+   height:40px;   /* Height of the footer */
+   background:lightgray;
+}
+
+.navbar {
+width: 100%;  /* i'm assuming full width */
+    height: 80px; /* change it to desired width */
+    background-color: lightgray; /* change to desired color */
+}
+
+.navbar > a {
+	display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    height: 80px;  
+    line-height: 80px;  }
+	
+button  {
+	height:50px;
+	width: 200px;
+	font-size:1.5em;
+	color : green;
+	border: none;
+	}
+
+button:hover  {
+	color : red;
+	background-color: #fada5e;
+	}
+	
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}	

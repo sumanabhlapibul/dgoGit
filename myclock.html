@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Java Clock</title>
+<meta http-equiv="refresh" content="1">
+<style>
+
+.container {
+	height:200px;	
+	position : relative;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 45%;
+ 
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left : 35%;
+}
+
+h1 {
+  text-align: center;
+  color : blue;
+  font-size : 60px;
+}
+h2 {
+  text-align: center;
+  color : green;
+  font-size : 40px;
+}
+</style>
+</head>
+<body>
+<script>
+
+var today = new Date();
+var date = today.getDate()+'-'+ (today.getMonth()+1) +'-'+ today.getFullYear();
+//ensure second comes as 01, 09
+var sec = ("0" + today.getSeconds()).slice(-2);
+var time = today.getHours() + ":" + today.getMinutes()  + ":" + sec;//+ ":" + today.getSeconds();
+
+//document.write( " Today is " + date + " and the time is " + time + "<br>");
+
+// ensure date comes as 01, 09 etc
+	var DD = ("0" + today.getDate()).slice(-2);
+	// getMonth returns month from 0
+	var MM = ("0" + (today.getMonth() + 1)).slice(-2);
+	var dd = DD+'-'+ MM+'-'+ today.getFullYear();
+	//document.write( " Today is " + dd + "<br>");
+	
+	const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+	var ddd = DD+'-'+ monthNames[today.getMonth()]+'-'+ today.getFullYear();
+	//document.write( " Today is " + ddd + "<br>");
+</script>
+
+<!-- Add today date using JavaScript -->
+<div class="container vertical-center">
+  
+	<h1 id = "dte"></h1>
+	<h2 id = "hrs"></h2>
+
+</div>
+<script>
+//using date from above script declared as var
+document.getElementById("dte").innerHTML =  ddd ;
+document.getElementById("hrs").innerHTML =  time ;
+</script>
+
+</body>
+</html>
