@@ -3,6 +3,9 @@
 <html>
 <head>
 <title>Java Clock</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link rel="stylesheet" href="css/demo.css"/>
+<link rel="stylesheet" href="css/theme1.css"/>
 <meta http-equiv="refresh" content="1">
 <style>
 
@@ -14,7 +17,17 @@
 .vertical-center {
   margin: 0;
   position: absolute;
-  top: 45%;
+  top: 55%;
+ 
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left : 35%;
+}
+
+.vertical-top {
+  margin: 0;
+  position: absolute;
+  top: 15%;
  
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -34,13 +47,23 @@ h2 {
 </style>
 </head>
 <body>
+
+<div id="caleandar" class = "container vertical-top">
+
+    </div>
+
+    <script type="text/javascript" src="js/caleandar.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>	
+
 <script>
 
 var today = new Date();
 var date = today.getDate()+'-'+ (today.getMonth()+1) +'-'+ today.getFullYear();
 //ensure second comes as 01, 09
 var sec = ("0" + today.getSeconds()).slice(-2);
-var time = today.getHours() + ":" + today.getMinutes()  + ":" + sec;//+ ":" + today.getSeconds();
+//ensure minutes comes as 01,09
+var minute = ("0" + today.getMinutes()).slice(-2);
+var time = today.getHours() + ":" + minute  + ":" + sec;//+ ":" + today.getSeconds();
 
 //document.write( " Today is " + date + " and the time is " + time + "<br>");
 
