@@ -127,33 +127,31 @@ const evaluate = document.getElementsByClassName("evaluate");
 evaluate[0].addEventListener("click", () => {
     if (selected == "true") {
        // result[0].innerHTML = "True";
+       result[0].innerHTML = "Submitted";
        // result[0].style.color = "green";
         score[id] =1 ;
-       // console.log(id + " : " + score[id]);              
-    } 
+       // console.log(id + " : " + score[id]);         
     
-    if (id == 4 ) {
-        var total = score.reduce((a,b)=> a+b,0);
-        var result = document.getElementsByClassName("result");
-        result[0].innerHTML = id+1 + " questions <br>  Total Score : " +  total;
-    }  
+    }     
     
     else {
        // result[0].innerHTML = "False";
        // result[0].style.color = "red";
-        //score[id] = 0 ;
+       result[0].innerHTML = "Submitted";
+         score[id] = 0 ;
         //console.log(id + " : " +  score[id]);
         }
     
+
     }
 )
-
 
 }
 
 if (start) {
 iterate("0");
 var score = new Array(5);
+var total = 0;
 }
 
 // Next button and method
@@ -166,8 +164,14 @@ if (id < 4) {
     id++;
     iterate(id);
     console.log(id);
+    total+=score[id-1];
+    console.log(total);
 }
-
+else {
+    total+=score[id];
+    var result = document.getElementsByClassName("result");
+    result[0].innerHTML = id+1 + " questions <br>  Total Score : " +  total;
+}
 
 })
 
