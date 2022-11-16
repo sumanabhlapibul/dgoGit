@@ -38,12 +38,13 @@ const Questions = [{
 {
     id: 4,
     q: "5. The Safari is? ",
-    a: [{ text: "Browser", isCorrect: false },
+    a: [{ text: "Browser", isCorrect: true },
         { text: "Operating System", isCorrect: false },
         { text: "Antivirus", isCorrect: false },
-        { text: "Search Engine", isCorrect: true }
+        { text: "Search Engine", isCorrect: false }
     ]
 },
+
 ]
 
 // Set start
@@ -127,21 +128,37 @@ const evaluate = document.getElementsByClassName("evaluate");
 evaluate[0].addEventListener("click", () => {
     if (selected == "true") {
        // result[0].innerHTML = "True";
-       result[0].innerHTML = "Submitted";
+       score[id] =1 ;
+       var sum = total+ score[id];
+       if (id < 4) {
+        result[0].innerHTML = "Submitted";
+       }
+       if (id == 4) {
+       result[0].innerHTML = "Submitted" ;
+       setTimeout(() => {result[0].innerHTML = "Total Score = " + sum }, 1000);
+       }
+        //result[0].innerHTML = "Submitted id : " + id + " <br> score : "+ score[id] + "<br>Total Score = " + sum;
        // result[0].style.color = "green";
-        score[id] =1 ;
-       // console.log(id + " : " + score[id]);         
-    
+       // console.log(id + " : " + score[id]);   
+        // console.log(typeof id );
+
     }     
     
     else {
        // result[0].innerHTML = "False";
        // result[0].style.color = "red";
-       result[0].innerHTML = "Submitted";
-         score[id] = 0 ;
+       score[id] = 0 ;
+       var sum = total+ score[id];
+       
+       if (id < 4) {
+        result[0].innerHTML = "Submitted";
+       }
+       if (id == "4") {
+        result[0].innerHTML = "Submitted" ;
+        setTimeout(() => {result[0].innerHTML = "Total Score = " + sum }, 1000);
+         }
         //console.log(id + " : " +  score[id]);
         }
-    
 
     }
 )
@@ -150,7 +167,7 @@ evaluate[0].addEventListener("click", () => {
 
 if (start) {
 iterate("0");
-var score = new Array(5);
+var score = new Array(6);
 var total = 0;
 }
 
@@ -160,17 +177,12 @@ var id = 0;
 
 next.addEventListener("click", () => {
 start = false;
+total+=score[id];
+//console.log("total = " + total);
 if (id < 4) {
     id++;
     iterate(id);
-    console.log(id);
-    total+=score[id-1];
-    console.log(total);
-}
-else {
-    total+=score[id];
-    var result = document.getElementsByClassName("result");
-    result[0].innerHTML = id+1 + " questions <br>  Total Score : " +  total;
+    console.log(id);  
 }
 
 })
